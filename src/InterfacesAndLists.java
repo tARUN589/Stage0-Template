@@ -5,35 +5,65 @@
  */
 
 // Import `ArrayList` and `List` from the `java.util` package.
-
+import java.util.*;
 
 // Define an interface named `IntakeSensor` with a single method:
 // `double distanceMillimeters();`
+public interface IntakeSensor {
 
+    double distanceMillimeters();
+}
 
 // Create a `BeamBreak` class that implements `IntakeSensor`.
 // The method `distanceMillimeters()` should return `3.0`.
-
+public class BeamBreak implements IntakeSensor {
+    
+    @Override
+    public double distanceMillimeters() {
+        return 3.0;
+    }
+}
 
 // Create a `LaserCAN` class that implements `IntakeSensor`.
 // The method `distanceMillimeters()` should return `5.0`.
-
+public class LaserCAN implements IntakeSensor {
+    
+    @Override
+    public double distanceMillimeters() {
+        return 4.0;
+    }
+}
 
 // Define a generic class named `Pair<A, B>` with two private final fields:
 // `first` of type `A`, and `second` of type `B`.
 // Provide a constructor `Pair(A first, B second)` and getter methods
 // `getFirst()` and `getSecond()`.
+public class Pair<A, B> {
+    private final A first;
+    private final B second;
+
+    Pair(A first, B second) {
+        this.first = first;
+        this.second = second;
+    }
+}
 
 
 void main() {
     // Create a variable named `beamBreak` with type `IntakeSensor`, and assign it a new instance of BeamBreak.
     // Create a variable named `laserCAN` of type `IntakeSensor`, and assign it a new instance of LaserCAN.
     // Print the result of calling `distanceMillimeters()` on both sensors.
+    IntakeSensor beamBreak = new BeamBreak();
+    BeamBreak beamBreak2 = new BeamBreak();
+    IntakeSensor laserCAN = new LaserCAN();
 
+    System.out.println(beamBreak.distanceMillimeters());
+    System.out.println(beamBreak2.distanceMillimeters());
+    System.out.println(laserCAN.distanceMillimeters());
 
     // Create a Pair of String and Integer (Pair<String, Integer>) with the values "Robot" and 254.
     // Print the first value and the second value separated by a space using getFirst() and getSecond().
-
+    Pair pair = new Pair(beamBreak, laserCAN);
 
     // Create a List of Strings (`List<String>`) named `subsystems` using `new ArrayList<>()`.
     // Add the strings "Drivetrain", "Intake", and "Shooter" to `subsystems`.

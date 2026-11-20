@@ -7,11 +7,17 @@
 void main() {
     // Create an integer array named `driveMotors` that holds the values
     // 1, 2, 3, 4 and print out the third value in the array.
+    int[] driveMotors = {1, 2, 3, 4};
+    System.out.println(driveMotors[2]);
 
 
     // Create another integer array named `distance` that holds the values
     // 10,20,30,40. Iterate through the array using the integer i and
     // print out the value of i.
+    int[] distance = {10, 20, 30, 40};
+    for (int distances : distance) {
+        System.out.println(distances);
+    }
 
 
     //Create an double array named `motorSpeeds` that holds the values

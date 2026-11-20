@@ -21,7 +21,7 @@ void main() {
     // Below, create a while loop that checks if calibrationTime is less than 5
     // if that is true, print "Calibrating", then increase calibrationTime by one
     // when calibrationTime is no longer less than 5, print "Done!"
-    int calibrationTime;
+    int calibrationTime = 0;
 
 
 

@@ -10,6 +10,26 @@
 // Lastly, below the definitions of the `x` and `y` fields, define a static final
 // field `ORIGIN`, of type `Point`, and assign to it a new `Point` instance
 // with x = 0 and y = 0.
+public static class Point {
+
+    private final double x;
+    private final double y;
+    public static final Point ORIGIN = new Point(0, 0);
+
+    public Point(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+}
 
 
 void main() {

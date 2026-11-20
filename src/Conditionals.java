@@ -24,6 +24,13 @@ void main() {
     // shooter motors. Then print the value of `shooterVelocity`. After running,
     // change `shooterEnabled` to `true` and re-run; the code should now print 1.
     boolean shooterEnabled = false;
+    int shooterVelocity;
+
+    if (shooterEnabled) {
+        shooterVelocity = 1;
+    } else {
+        shooterVelocity = 0;
+    }
 
 
     // Print "Success!" if `statusCode` is equal to 0. Otherwise, if `statusCode`

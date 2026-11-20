@@ -8,6 +8,9 @@ void main() {
     // Create two integer variables, `first` and `second`. Assign `first`
     // a value of 5, and `second` a value of 4. Then, print the sum of
     // `first` and `second`.
+    int first = 5;
+    int second = 4;
+    System.out.println(first + second);
 
 
     // Create an integer variable `result`. Using Java math operators, multiply
